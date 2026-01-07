@@ -28,6 +28,7 @@ interface LeanProduct {
   id: string;
   name: string;
   brand: string;
+  image: string;
 }
 
 const db = new CatalogueDB();
@@ -42,7 +43,12 @@ export default function Home() {
   const processFile = (file: File) => {
     if (!file) return;
     setStatus("Processing...");
-    // TODO
+    // TODO FEEDBACK FEEEDBACK FEEDBACK
+    // - INPUT FILE => OUTPUT PASSED TO UI
+    // -- LEAN PRODUCTS, EACH === {id, name, brand, image, <DATA THAT ALLOWS TO DETERMINE INPUT-STATE PRODUCTS<->CATALOGUE MAPPING, E.G. catageory: id, or categoryPath: string>} }
+    // -- CATALOGUE DATA EXTRACTED, E.G.
+    // -- CATALOGUE PATH INDEXING EXTRACTED, E.G, "Electronics > Audio > Headphones"
+
     Papa.parse(file, {
       header: true,
       worker: true,
