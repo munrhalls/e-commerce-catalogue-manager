@@ -47,9 +47,13 @@ export default function Home() {
     // 1. Input ambiguity must be solved to 100% non-ambiguity. Input expectations must be 100% 1-to-1 clear.
     // - biggest problem: ambiguity of input product-catalogue mapping; might be based on category entity with parent id or category id with child id or some other format
     // - i must enforce accepted formats and input has to be 100% clear about requirement for processable input
-    // -
+    // - should provide sample CSV files for different supported formats
     // - should be able to handle different column namings (e.g., "product_name" instead of "name")
     // - should be able to handle different data types/formats (e.g., numbers with commas)
+    // - actually, it's a much broader problem, going hard on pen and paper
+    // - the input itself - and non-ambiguity of it - is the biggest challenge and as it turns out, it's not yet solved in general
+    // - the scope of this app will be to go via that bigger problem solution and merely carry over its output to ui and final output; and what is the bigger problem? handling all possible inputs. all.
+    // - why is that needed? because otherwise the app is not generally usable, it's useless for anyone but me - so it's not a business solution for anyone else at all
 
     Papa.parse(file, {
       header: true,
