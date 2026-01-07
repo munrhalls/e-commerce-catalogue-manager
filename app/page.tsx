@@ -43,11 +43,13 @@ export default function Home() {
   const processFile = (file: File) => {
     if (!file) return;
     setStatus("Processing...");
-    // TODO FEEDBACK FEEEDBACK FEEDBACK
-    // - INPUT FILE => OUTPUT PASSED TO UI
-    // -- LEAN PRODUCTS, EACH === {id, name, brand, image, <DATA THAT ALLOWS TO DETERMINE INPUT-STATE PRODUCTS<->CATALOGUE MAPPING, E.G. catageory: id, or categoryPath: string>} }
-    // -- CATALOGUE DATA EXTRACTED, E.G.
-    // -- CATALOGUE PATH INDEXING EXTRACTED, E.G, "Electronics > Audio > Headphones"
+    // TODO RE
+    // 1. Input ambiguity must be solved to 100% non-ambiguity. Input expectations must be 100% 1-to-1 clear.
+    // - biggest problem: ambiguity of input product-catalogue mapping; might be based on category entity with parent id or category id with child id or some other format
+    // - i must enforce accepted formats and input has to be 100% clear about requirement for processable input
+    // -
+    // - should be able to handle different column namings (e.g., "product_name" instead of "name")
+    // - should be able to handle different data types/formats (e.g., numbers with commas)
 
     Papa.parse(file, {
       header: true,
